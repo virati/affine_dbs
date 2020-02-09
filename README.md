@@ -1,8 +1,10 @@
 # Affine DBS
 
 ## Overview
-Adaptive Deep Brain Stimulation using control-affine approaches
 ![Overview of Framework](imgs/ctrl_aff_sysdiag.png)
+
+This project is about applying control-affine analyses to the design of adaptive deep brain stimulation (DBS), specifically in psychiatric illnesses.
+Using Lie analyses, the goal of this project is to develop a closed-loop DBS controller that uses estimates of the brain state to adjust stimulation parameters with a fixed neural dynamics, fixed set of stimulation locations, and fixed readout location.
 
 ### Requirements
 This project uses the [AutoLie library](https://github.com/virati/autoLie)
