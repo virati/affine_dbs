@@ -2,10 +2,10 @@
 
 ## Overview
 Adaptive Deep Brain Stimulation using control-affine approaches
+![Overview of Framework](imgs/ctrl_aff_sysdiag.png)
 
 ### Requirements
-This project uses the [AutoLie library](https://github.com/virati/autoLie).
-
+This project uses the [AutoLie library](https://github.com/virati/autoLie)
 
 ## Introduction
 Control-affine frameworks enable us to bring tools from differential geometry to bear on control theory problems [].
