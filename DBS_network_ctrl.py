@@ -9,7 +9,9 @@ This is the big kahoona
 """
 
 import sys
-sys.path.append('../src/')
+sys.path.append('../src')
+sys.path.append('/home/virati/Dropbox/projects/Research/DBSControl/autoLie/src')
+
 
 from lie_lib import *
 import networkx as nx

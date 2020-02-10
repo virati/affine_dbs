@@ -9,33 +9,37 @@ Using Lie analyses, the goal of this project is to develop a closed-loop DBS con
 ### Requirements
 This project uses the [AutoLie library](https://github.com/virati/autoLie)
 
-## Introduction
-Control-affine frameworks enable us to bring tools from differential geometry to bear on control theory problems [].
+## Repo Outline
+The main scripts of this repo are examples.
 
-The control-affine framework we'll use for our study is:
-![]().
+### Field Interact
+In field_interact.py we perform a basic, generic analysis of a control-affine system.
 
-The brain dynamics $\dot{x}$ are determined by an intrinsic, or *drift*, dynamics $f_\mathcal{L}$.
+![](imgs/field-interact-LD.png)
 
-The control signal $\vec{u}(t)$ is then coupled into our system dynamics through $g_\tau(x)$.
+Running the script gets us the figure above, which shows the interaction between two vector fields in 3D
+We plot the drift field in red, then the control field blue.
 
-This structure is what enables us to then use techniques from geometric control theory to analyse how our intrinsic dynamics $f$ interact with the control coupling $g$.
+At this point, we have the following picture
+![](imgs/field-interact.png)
 
-**Measuring** our system is crucial. In a closed-loop control system, our control signal $\vec{u}$ is a function of our state $x$ through our measurement of that state $\vec{y}$.
+Once we calculate the Lie derivatives of our control along the drift, to first order, we add in the green vectors seen in the first figure.
 
+### DBS Network Control
+In DBS_network_control.py we start exploring the rational design of a controller based off of a fixed stimulation and recording setup.
 
+> Control-Disease interaction is zero: True
 
-## Network-Disease Model
-First, we'll build the Network-Disease Model
+> Measurement-Disease interaction is zero: True
 
-### Brain Network
-Starting with a connectivity matrix, we build a network.
-
-We then add the dynamics. For this demomnstration we assume a fairly simple dynamics.
-
-### Disease Network
-To add the disease to our network model, we build a linear mapping between the brain state and the behavioral state.
+> Dyn+Ctrl is zero: True
 
 
-In this model, the symptoms are related to each other only through the brain networks.
+Runnning the script gives us a (boring for now) calculation of how the control interacts with our disease mapping. In other words, how much control do we have of the neural state **with respect to how the neural state maps to the behavioral state**.
+
+This is critical since we don' particularly care for the arbitrary control of our state to any part of the statepsace.
+
+
+## The Math
+For a detailed account of the math behind this work head on over to the [Jupyter notebook]()
 
