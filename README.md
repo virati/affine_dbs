@@ -41,5 +41,5 @@ This is critical since we don' particularly care for the arbitrary control of ou
 
 
 ## The Math
-For a detailed account of the math behind this work head on over to the [Jupyter notebook]()
+For a detailed account of the math behind this work head on over to the [Jupyter notebook](notebooks/LfLh_Overview.ipynb)
 
